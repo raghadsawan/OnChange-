@@ -1,0 +1,20 @@
+<!-- parent Child:
+
+<child component - selector [subscription]="value"></child component - selector>
+--------------------------------
+child component:
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+
+   @Input('subscription') subscription: Subscription;
+
+
+implements OnChanges
+
+
+   ngOnChanges(changes: SimpleChanges): void {
+//it works whenever the value given to subcription parameter in the parent changes
+      if(changes.subscription){
+         console.log('s',this.subscription?.maxApplicationsCount);
+         console.log('s',this.subscription?.maxUsersCount);
+      }
+   } -->
